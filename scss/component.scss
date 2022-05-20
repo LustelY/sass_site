@@ -1,0 +1,90 @@
+// component
+
+.box {
+  display: flex;
+  .items {
+    box-sizing: border-box;
+    padding: 50px;
+    flex: 100%;
+    font-size: $fontSizeMid;
+    flex-shrink: $fontSizeMid;
+    .title {
+      font-size: $titleFontSizeMid;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &.items_2 {
+    .items {
+      flex: 50%;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 0;
+
+  & + .gbtn {
+    margin-top: 20px;
+    &.right {
+      float: right;
+    }
+  }
+
+  th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: $fontSizeSmall;
+    color: white;
+    background: $borderColorPrimary;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: $fontColorBasic;
+    border-bottom: 1px solid $borderColorPrimary;
+  }
+}
+
+.tbl-header {
+  background: $tableBg;
+}
+
+.tbl-content {
+  margin-top: 0;
+}
+
+// aacoridion
+.accoridion {
+  dl {
+    margin: 50px auto;
+    dt {
+      font-size: 18px;
+      text-indent: 3em;
+      color: white;
+      line-height: 35px;
+      height: 35px;
+      // background: $tableBg;
+      background: black;
+    }
+    dd {
+      height: 300px;
+      background: #d4d0c8;
+
+      p {
+        text-indent: 1em;
+        padding: 20px;
+      }
+    }
+  }
+}

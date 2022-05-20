@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>xwood</title>
+  <link rel="stylesheet" href="../css/style.min.css">
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+</head>
+
+<body class="subpage">
+  <div id="wrap">
+    <header id="header">
+      <!-- 로고 -->
+      <h1 id="top-logo">
+        <a href="../index.html">XWOOD</a>
+      </h1>
+      <!-- 메인메뉴 -->
+      <nav id="top-nav">
+        <ul>
+          <li>
+            <a href="../company/introduce.html">Company</a>
+            <ul class="sub-menu">
+              <li><a href="../company/introduce.html">Introduce</a></li>
+              <li><a href="../company/ci.html">CI</a></li>
+              <li><a href="../company/history.html">History</a></li>
+            </ul>
+          </li>
+          <li><a href="../product/product.html">Product</a></li>
+          <li><a href="../gallery/gallery.html">Gallery</a></li>
+          <li>
+            <a href="../community/notice.html">Community</a>
+            <ul class="sub-menu">
+              <li><a href="../community/notice.html">Notice</a></li>
+              <li><a href="../community/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="./location.html">Location</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- 메인배너 -->
+      <div class="container">
+        <!-- 컨텐츠 영역 -->
+        <aside id="lnb">
+          <ul>
+            <li><a href="../location/location.html">Location</a></li>
+          </ul>
+        </aside>
+        <!-- 컨텐츠 본문 영역 -->
+        <div class="content">
+          <h2 class="sub-title"><span>Location</span></h2>
+          <div class="inner">
+            <div id="map" sytyle="width: 1000px; height: 350px; margin: 50px auto 0;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <!-- footer 상단 영역 -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="column footer-logo">
+              <!-- footer logo -->
+              <h3>Logo</h3>
+            </div>
+            <div class="column">
+              <!-- site map -->
+              <h4>Site map</h4>
+              <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#myprofile">MyProfile</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#myskill">Myskill</a></li>
+                <li><a href="#ourclients">Ourclients</a></li>
+                <li><a href="#mytools">Mytools</a></li>
+                <li><a href="#project">Project</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <!-- contact us -->
+              <h4>Contact us</h4>
+              <p>
+                A108 Adam street<br>
+                New York, NY 535022<br>
+                United states<br>
+                <strong>Phone :</strong><a href="tel:+82-10-8321-3017">+82-10-8321-3017</a><br>
+                <strong>Email :</strong><a href="mail:lustel@naver.com">lustel@naver.com</a>
+              </p>
+            </div>
+            <div class="column news">
+              <!-- news -->
+              <h4>News</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi veniam explicabo, doloremque ipsum ut cupiditate nesciunt nam aspernatur ipsam repellendus eius mollitia id!</p>
+              <form>
+                <input type="text" name="search"><input type="submit" value="search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer 하단 영역 -->
+      <div class="container">
+        <div class="copyright">
+          &copy;copyright<strong>MyPage</strong> .All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed By <a href="mailto:lustel@naver.com">MySelf</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=740e53985f032d0a458f47fc4f7c3ba9"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+      };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다
+    var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null);
+  </script>
+</body>
+
+</html>
